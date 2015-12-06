@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- voucher gift id the product used in cart to use the gift amount -->
+        <record id="voucher_gift" model="product.product">
+            <field name="name">Gift Card</field>
+            <field name="website_published" eval="False" />
+            <field name="type">consu</field>
+            <field name="is_gift">True</field>
+            <field name="list_price">-1000</field> <!-- # avoid promo dipsaying -->
+            <field name="description_sale">Conditions of terms... 
+                Cannot be used to buy other product of type 'Gift'</field>
+            <field name="image" type="base64" file="website_sale_gift/static/src/img/gift-card.jpg"/>
+        </record>
+
+        <record id="voucher_gift_10" model="product.product">
+            <field name="name">Gift Card</field>
+            <field name="name">Gift Card 10</field>
+            <field name="list_price">10</field>
+            <field name="website_published" eval="True" />
+            <field name="type">consu</field>
+            <field name="is_gift">True</field>
+            <field name="image" type="base64" file="website_sale_gift/static/src/img/gift-card-10.jpg"/>
+        </record>
+
+        <record id="voucher_gift_25" model="product.product">
+            <field name="name">Gift Card</field>
+            <field name="name">Gift Card 25</field>
+            <field name="list_price">25</field>
+            <field name="website_published" eval="True" />
+            <field name="type">consu</field>
+            <field name="is_gift">True</field>
+            <field name="image" type="base64" file="website_sale_gift/static/src/img/gift-card-25.jpg"/>
+        </record>
+
+        <record id="voucher_gift_50" model="product.product">
+            <field name="name">Gift Card</field>
+            <field name="name">Gift Card 50</field>
+            <field name="list_price">50</field>
+            <field name="website_published" eval="True" />
+            <field name="type">consu</field>
+            <field name="is_gift">True</field>
+            <field name="image" type="base64" file="website_sale_gift/static/src/img/gift-card-50.jpg"/>
+        </record>
+    </data>
+</openerp>
