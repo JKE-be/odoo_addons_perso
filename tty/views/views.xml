@@ -1,0 +1,48 @@
+<openerp>
+  <data>
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="tty.server_list">
+      <field name="name">Server list</field>
+      <field name="model">tty.server</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="tty"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="tty.server_form">
+      <field name="name">Server list</field>
+      <field name="model">tty.server</field>
+      <field name="arch" type="xml">
+        <form>
+          <group>
+            <field name="name" class='oe_edit_only'/>
+            <field name="tty_server" class='oe_edit_only'/>
+            <field name="command" class='oe_edit_only'/>
+            <field name="ro" class='oe_edit_only'/>
+          </group>
+          <field name="tty" class='oe_read_only' widget='tty'/>
+        </form>
+      </field>
+    </record>
+    
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="tty.action_window">
+      <field name="name">tty window</field>
+      <field name="res_model">tty.server</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- Top menu item -->
+    <menuitem name="tty" id="tty.menu_root"/>
+    <menuitem name="Servers" id="tty.menu_1" parent="tty.menu_root"/>
+    <!-- actions -->
+    <menuitem name="Server List" id="tty.menu_1_list" parent="tty.menu_1" action="tty.action_window"/>
+
+    -->
+  </data>
+</openerp>

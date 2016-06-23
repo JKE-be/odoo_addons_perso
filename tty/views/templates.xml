@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+       <template id="assets_backend" name="stock_barcode assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/tty/static/src/js/tty_iframe.js"></script>
+                <link rel="stylesheet" href="/tty/static/src/css/tty_iframe.less"/>
+            </xpath>
+        </template>
+
+    </data>
+</openerp>

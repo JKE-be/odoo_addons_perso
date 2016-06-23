@@ -1,0 +1,33 @@
+<!doctype html>
+<html class='dark'>
+<head>
+    <title>tty jke</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="term.js"></script>
+    <script src="options.js"></script>
+    <script src="tty.js"></script>
+
+    <script>
+      var queryDict = {}
+      location.search.substr(1).split("&").forEach(function(item) {
+        queryDict[item.split("=")[0]]=(item.split("=")[1]+'').replace(/\+/g, '%20')
+      })
+
+      tty.on('connect', function() {
+        new tty.Window();
+        setTimeout(
+            function() { 
+                tty.windows[0].maximize();
+                tty.windows[0].tabs[0].send(decodeURIComponent(queryDict.cmd)+'\n');
+                if (queryDict.ro === '1') {
+                    setTimeout(function() { tty.windows[0].tabs[0].is_ro  = true, 100});
+                }
+            }, 200);
+      });
+</script>
+
+</body>
+</html>

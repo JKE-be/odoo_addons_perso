@@ -1,0 +1,10 @@
+{
+  "usersx": {
+     "foo": "bar"
+  },
+  "localOnly":true,
+  "port": 8082,
+  "static": "/home/odoo/src/odoo/odoo/tty_conf/static",
+  "log":true,
+"debug":true
+}

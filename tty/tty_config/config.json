@@ -1,0 +1,9 @@
+{
+  "xusers": {
+     "foo": "bar"
+  },
+  "localOnly":true,
+  "port": 8081,
+  "static": "~/src/odoo/odoo/tty_conf/static"
+}
+
